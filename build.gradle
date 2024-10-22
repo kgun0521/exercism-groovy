@@ -27,7 +27,7 @@ subprojects {
         // compile tasks will now run against this source set.
         main {
             groovy {
-                srcDirs = ['.meta/src/reference/groovy']
+                srcDirs = ['src/main/groovy']
             }
         }
 
