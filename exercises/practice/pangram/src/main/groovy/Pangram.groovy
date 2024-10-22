@@ -1,7 +1,9 @@
 class Pangram {
 
     static boolean isPangram(String sentence) {
-        throw new UnsupportedOperationException('Method implementation is missing')
+        return ('a'..'z').every {
+            sentence.toLowerCase().contains(it)
+        }
     }
 
 }

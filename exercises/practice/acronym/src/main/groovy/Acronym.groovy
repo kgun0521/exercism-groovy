@@ -1,7 +1,11 @@
 class Acronym {
 
     static String abbreviate(String phrase) {
-        throw new UnsupportedOperationException('method not implemented.')
+        return phrase.replace("_", "")
+        .split(/[\s\-]/)
+        .findAll {it.length() > 0}
+        .collect {it[0]}
+        .join("")
+        .toUpperCase()
     }
-
 }

@@ -1,7 +1,16 @@
 class Hamming {
 
     def distance(strand1, strand2) {
-        throw new UnsupportedOperationException('Method implementation is missing')
+        def distance = 0
+        if (strand1.length() != strand2.length()) {
+            throw new ArithmeticException()
+        }
+        strand1.eachWithIndex { String entry, int i ->
+            if (entry != strand2[i]) {
+                distance++
+            }
+        }
+        return distance
     }
 
 }

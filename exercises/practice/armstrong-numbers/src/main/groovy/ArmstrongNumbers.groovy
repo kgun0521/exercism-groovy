@@ -1,7 +1,8 @@
 class ArmstrongNumber {
 
     static isArmstrongNumber(number) {
-        throw new UnsupportedOperationException('method not implemented.')
+        def strNumber = number.toString()
+        return strNumber.collect {it as int ** strNumber.length()}.sum() == number
     }
 
 }
