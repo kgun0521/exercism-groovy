@@ -1,19 +1,39 @@
 class Triangle {
-
+    float a, b, c
     Triangle(a, b, c) {
-        throw new UnsupportedOperationException('Constructor implementation is missing')
+            this.a = a
+            this.b = b
+            this.c = c
+    }
+
+    boolean isTriangle () {
+        if (a==0 || b==0 || c==0) {
+            return false
+        } else if (a+b >= c && b+c>= a && a+c>=b){
+            return true
+        }
+        return false
     }
 
     boolean isEquilateral() {
-        throw new UnsupportedOperationException('isEquilateral method not implemented.')
+        if (isTriangle() && a == b && b == c) {
+            return true
+        }
+        return false
     }
 
     boolean isIsosceles() {
-        throw new UnsupportedOperationException('isIsosceles method not implemented.')
+        if (isTriangle() && (a==b || b==c || a==c)) {
+            return true
+        }
+        return false
     }
 
     boolean isScalene() {
-        throw new UnsupportedOperationException('isScalene method not implemented.')
+        if (isTriangle() && a!=b && b!=c && a!=c) {
+            return true
+        }
+        return false
     }
 
 }

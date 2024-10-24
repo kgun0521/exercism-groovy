@@ -1,6 +1,18 @@
 class Anagram {
 
+    def subject
+
+    Anagram(subject) {
+        this.subject = subject.toLowerCase()
+    }
+
+    def isAnagram (word) {
+        return (word.toLowerCase().collect().sort() == subject.collect().sort() && word.toLowerCase() != subject)
+    }
+
     def find(candidates) {
-        throw new UnsupportedOperationException('method not implemented.')
+        return candidates.findAll {
+            isAnagram(it)
+        }
     }
 }

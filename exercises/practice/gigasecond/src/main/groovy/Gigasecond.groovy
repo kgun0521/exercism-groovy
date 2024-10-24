@@ -1,6 +1,13 @@
+import java.time.LocalDate
+import java.time.LocalDateTime
+
 class Gigasecond {
 
-    // YOUR CODE HERE
-    // HINT: methods that don't change the state of an object can be 'static'
+    static def add(LocalDate moment) {
+        return moment.atStartOfDay().plusSeconds(10**9)
+    }
 
+    static def add(LocalDateTime moment) {
+        return moment.plusSeconds(10**9)
+    }
 }

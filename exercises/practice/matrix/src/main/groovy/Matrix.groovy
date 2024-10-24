@@ -1,14 +1,19 @@
 class Matrix {
-
+    def matrix
     Matrix(String asString) {
-        throw new UnsupportedOperationException('Method implementation is missing')
+        this.matrix = []
+        asString.eachLine {
+            this.matrix.add(it.split(" ").collect{it.toInteger()})
+        }
     }
 
     int[] row(int rowNumber) {
-        throw new UnsupportedOperationException('Method implementation is missing')
+        return this.matrix[rowNumber]
     }
 
     int[] column(int columnNumber) {
-        throw new UnsupportedOperationException('Method implementation is missing')
+        return matrix.collect {
+            it[columnNumber]
+        }
     }
 }
