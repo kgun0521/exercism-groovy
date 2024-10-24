@@ -1,6 +1,10 @@
 class QueenAttack {
 
     static canAttack(Queen q1, Queen q2) {
-        throw new UnsupportedOperationException('Method implementation is missing')
+        if (q1.row == q2.row || q1.column == q2.column || Math.abs(q1.row - q2.row) == Math.abs(q1.column - q2.column)) {
+            return true
+        } else {
+            return false
+        }
     }
 }

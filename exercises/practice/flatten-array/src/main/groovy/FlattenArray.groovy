@@ -1,5 +1,15 @@
 class FlattenArray {
     static List flatten(List l) {
-        throw new UnsupportedOperationException('Method implementation is missing')
+        def output = []
+        for (def item in l) {
+            if (item != null) {
+                if (item instanceof List) {
+                    output += flatten(item)
+                } else {
+                    output += item
+                }
+            }
+        }
+        return output
     }
 }

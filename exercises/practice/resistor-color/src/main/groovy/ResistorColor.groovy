@@ -1,7 +1,16 @@
 class ResistorColor {
-
+    static def colors = ['black',
+                 'brown',
+                 'red',
+                 'orange',
+                 'yellow',
+                 'green',
+                 'blue',
+                 'violet',
+                 'grey',
+                 'white']
     static colorCode(color) {
-        throw new UnsupportedOperationException('method not implemented.')
+        return this.colors.indexOf(color)
     }
 
 }
