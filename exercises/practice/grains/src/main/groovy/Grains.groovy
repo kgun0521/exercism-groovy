@@ -1,9 +1,12 @@
 class Grains {
     static square(num) {
-        throw new UnsupportedOperationException('Method implementation is missing')
+        if (num <= 0 || num > 64) {
+            throw new ArithmeticException()
+        }
+        return 2**(num-1)
     }
 
     static total() {
-        throw new UnsupportedOperationException('Method implementation is missing')
+        return (1..64).collect {2**(it-1)}.sum()
     }
 }
